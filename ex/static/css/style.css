@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 30px;
+}
+
+#menu {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  height: 50%;
+  margin: auto;
+}
+
+.selector {
+  overflow: hidden;
+  width: 150px;
+  text-align: center;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.selector.box {
+  margin: 10px;
+  position: relative;
+  border: 1px solid #bbbbbb;
+  border-radius: 5px;
+}
+
+.selector.box::before {
+  position: absolute;
+  top: 0.8em;
+  right: 0.5em;
+  content: "";
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #666666;
+  font-size: 16px;
+}
+
+.selector.box select {
+  padding: 8px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+table th:first-child,
+table td:first-child {
+  border-left: 1px solid #888;
+}
+
+table th {
+  padding: 10px;
+  text-align: center;
+  background: linear-gradient(#fff, #e0e0e0);
+  border: 1px solid #888;
+  border-left: none;
+}
+
+table td {
+  text-align: left;
+  border: 1px solid #888;
+  border-top: none;
+  border-left: none;
+  padding: 3px 10px;
+}
+
+#page_link {
+  display: flex;
+}
+
+.pagination {
+  list-style: none;
+  display: flex;
+}
+
+.pagination .page-item,
+.pagination .page-link {
+  margin: 0.3rem;
+  text-decoration: none;
+}
+
+.pagination .active {
+  text-decoration: underline;
+}
+
+.pagination .sr-only {
+  display: none;
+}

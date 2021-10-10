@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <title>ex1</title>
+</head>
+
+<body>
+
+  <div id="menu">
+    <form method="GET" action="/ex1/">
+      <label for="table_name">Table : </label>
+      <select class="selector box" name='table_name'>
+        <option value="null" disabled selected>{{ current_table }}</option>
+        {% for table_name in table_names %}
+        <option>{{ table_name }}</option>
+        {% endfor %}                   
+      </select>
+      <input type="submit" value="検索">
+    </form>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        {% for i in range(column_count) %}
+        <th>{{ column_names[i] }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in items %}
+      <tr>
+        {% for i in range(column_count) %}
+        <td>{{ item[i] }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</body>
+
+</html>
